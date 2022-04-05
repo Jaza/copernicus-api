@@ -16,7 +16,7 @@ protectedRouter.swagger({
 protectedRouter.mapDir(__dirname, {
     recursive: true,
     doValidation: true,
-    ignore: ["**.test.ts", "server.ts"],
+    ignore: ["**.test.ts", "server.ts", "server.js"],
 });
 
 export { protectedRouter };
