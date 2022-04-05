@@ -1,8 +1,9 @@
 import { randomUUID } from "crypto";
 import { Context } from "koa";
+import Koa from "koa";
 import { jest } from "@jest/globals";
 import request from "supertest";
-import { getApp } from "../../src/app";
+import { getConfiguredApp } from "../../src/app";
 import { dc } from "../../src/db";
 import { STATUS_SUSPENDED, Account, accountUpdateSchema } from "../../src/entity/account";
 import AccountController from "../../src/controller/account";
@@ -113,7 +114,7 @@ describe("Account controller", () => {
         // controller directly, the middleware doesn't kick in unless we go through
         // the router. So, unfortunately, that pretty much forces this to use supertest,
         // and to therefore become an integration test more than a unit test.
-        const res = await request(getApp(false).callback())
+        const res = await request(getConfiguredApp(new Koa(), false).callback())
             .patch("/external-users/foo/accounts/bar/")
             .send({status: "shermanated"})
             .set("Accept", "application/json");

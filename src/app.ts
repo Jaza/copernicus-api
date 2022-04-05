@@ -11,11 +11,9 @@ import { logger } from "./logger";
 import { unprotectedRouter } from "./unprotectedRoutes";
 import { protectedRouter } from "./protectedRoutes";
 
-// Make an app factory, so that we can instantiate an app object with JWT-based auth
-// completely disabled, for unit tests
-const getApp = (useJwt: boolean = true): Koa => {
-    const appInstance = new Koa();
-
+// More-or-less an app factory, so that we can instantiate an app object with JWT-based
+// auth completely disabled, for unit tests
+const getConfiguredApp = (appInstance: Koa, useJwt: boolean = true): Koa => {
     appInstance.use(helmet.contentSecurityPolicy({
         directives:{
           defaultSrc:["'self'"],
@@ -50,6 +48,6 @@ const getApp = (useJwt: boolean = true): Koa => {
     return appInstance;
 };
 
-const app = getApp();
+const app = getConfiguredApp(new Koa());
 
-export { app, getApp };
+export { app, getConfiguredApp };
