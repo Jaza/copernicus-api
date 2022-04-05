@@ -12,6 +12,12 @@ boilerplate.
 Can be deployed to AWS Lambda (plus DynamoDB and API Gateway) with
 [copernicus-lambda-deployer](https://github.com/Jaza/copernicus-lambda-deployer).
 
+Can be installed [from npm](https://www.npmjs.com/package/copernicus-api) with
+`npm install copernicus-api`.
+
+Requires either a real AWS DynamoDB back-end, or
+[dynamodb-local](https://hub.docker.com/r/amazon/dynamodb-local).
+
 ## Getting started
 
 To work locally with this project, follow the steps below:
@@ -23,5 +29,11 @@ To work locally with this project, follow the steps below:
 1. Preview your project: `npm run watch-server`
 1. Build and run the project in JS: `npm run build && npm run start`
 1. Run unit tests: `npm run test`
+
+## Publishing new releases
+
+1. Bump the version number in `package.json`
+1. `npm run build`
+1. `npm publish`
 
 Built by [Douugh](https://douugh.com/).
