@@ -27,8 +27,15 @@ To work locally with this project, follow the steps below:
 1. Copy `.example.env` to `.env` and set variables as required
 1. `npm run create-tables`
 1. Preview your project: `npm run watch-server`
-1. Build and run the project in JS: `npm run build && npm run start`
-1. Run unit tests: `npm run test`
+1. Go to `http://localhost:3000/swagger-html/` to CRUD away at the API
+
+## Building
+
+To build and run the project in JS: `npm run build && npm run start`
+
+## Testing
+
+To run unit tests: `npm run test`
 
 ## Publishing new releases
 
