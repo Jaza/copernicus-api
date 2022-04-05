@@ -1,4 +1,5 @@
 import { SwaggerRouter } from "koa-swagger-decorator";
+import { config } from "./config";
 
 const protectedRouter = new SwaggerRouter();
 
@@ -11,7 +12,7 @@ protectedRouter.swagger({
     ),
     version: "0.1.0",
     swaggerHtmlEndpoint: "/swagger-html/",
-    swaggerJsonEndpoint: "/swagger-json/"
+    swaggerJsonEndpoint: config.swaggerJsonEndpoint
 });
 
 // mapDir will scan the input dir, and automatically call router.map to all Router Class

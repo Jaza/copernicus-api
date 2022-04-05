@@ -1,6 +1,6 @@
 {
   "name": "copernicus-api",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "A fake banking API that's designed to be used in place of the Galileo API for testing purposes.",
   "main": "dist/app.js",
   "scripts": {
