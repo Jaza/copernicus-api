@@ -9,7 +9,9 @@ protectedRouter.swagger({
       "A fake banking API that's designed to be used in place of the Galileo API for " +
       "testing purposes."
     ),
-    version: "0.1.0"
+    version: "0.1.0",
+    swaggerHtmlEndpoint: "/swagger-html/",
+    swaggerJsonEndpoint: "/swagger-json/"
 });
 
 // mapDir will scan the input dir, and automatically call router.map to all Router Class
