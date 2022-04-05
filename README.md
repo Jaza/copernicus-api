@@ -24,7 +24,9 @@ To work locally with this project, follow the steps below:
 
 1. Fork, clone or download this project
 1. `npm install`
-1. Copy `.example.env` to `.env` and set variables as required
+1. Copy `.example.env` to `.env` and set variables as required - set `JWT_SECRET` to
+   a secret value, you can then go to https://jwt.io/ to generate a JWT based on that
+   secret, you'll need to send that JWT in requests to the Copernicus API
 1. `npm run create-tables`
 1. Preview your project: `npm run watch-server`
 1. Go to `http://localhost:3000/swagger-html/` to CRUD away at the API
