@@ -12,7 +12,8 @@ protectedRouter.swagger({
     ),
     version: "0.1.0",
     swaggerHtmlEndpoint: "/swagger-html/",
-    swaggerJsonEndpoint: config.swaggerJsonEndpoint
+    swaggerJsonEndpoint: "/swagger-json/",
+    prefix: config.swaggerPrefix
 });
 
 // mapDir will scan the input dir, and automatically call router.map to all Router Class
