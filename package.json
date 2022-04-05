@@ -1,9 +1,8 @@
 {
   "name": "copernicus-api",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "A fake banking API that's designed to be used in place of the Galileo API for testing purposes.",
   "main": "dist/app.js",
-  "types": "dist/app.d.ts",
   "scripts": {
     "watch-server": "nodemon --ignore tests/ --watch src -e ts,tsx --exec ts-node src/server.ts",
     "build-ts": "tsc",
